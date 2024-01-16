@@ -51,8 +51,9 @@ const Home = ({}) => {
             src="/omar.png"
             className=" items-center 2xl:w-[600px] rounded-full lg:hidden  "
             alt="person"
-            width={400}
-            height={400}
+            width={200}
+            priority
+            height={200}
           />
         </m.div>
       </div>

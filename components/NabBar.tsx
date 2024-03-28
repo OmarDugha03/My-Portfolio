@@ -1,8 +1,8 @@
-import { logo } from "@/public";
-import Image from "next/image";
-import { FC } from "react";
-import { Github, Linkedin, Youtube } from "lucide-react";
-import Link from "next/link";
+import { logo } from "@/public"
+import Image from "next/image"
+import { FC } from "react"
+import { Github, Linkedin, Youtube } from "lucide-react"
+import Link from "next/link"
 
 interface SideBarProps {}
 
@@ -11,7 +11,7 @@ const SideBar: FC<SideBarProps> = ({}) => {
     {
       id: 0,
       img: <Linkedin width={30} height={30} />,
-      link: "https://www.linkedin.com/in/omar-dugha-b3a2b129b?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
+      link: "https://www.linkedin.com/in/omar-dugha-5495222aa",
     },
     {
       id: 1,
@@ -21,7 +21,7 @@ const SideBar: FC<SideBarProps> = ({}) => {
     {
       id: 2,
       img: <Youtube width={30} height={30} />,
-      link: "https://youtube.com/@OmarDugha?si=aTBYHD_iIJq-puWm",
+      link: "/soon",
     },
     {
       id: 3,
@@ -38,7 +38,7 @@ const SideBar: FC<SideBarProps> = ({}) => {
       ),
       link: "https://www.upwork.com/freelancers/~010376979918c3549d",
     },
-  ];
+  ]
 
   return (
     <nav className="container pt-8 flex justify-between items-center">
@@ -64,7 +64,7 @@ const SideBar: FC<SideBarProps> = ({}) => {
         ))}
       </div>
     </nav>
-  );
-};
+  )
+}
 
-export default SideBar;
+export default SideBar

@@ -1,32 +1,34 @@
-"use client";
-import { zodResolver } from "@hookform/resolvers/zod";
-import { useForm } from "react-hook-form";
-import * as z from "zod";
-import { Button } from "@/components/ui/button";
+"use client"
+import { zodResolver } from "@hookform/resolvers/zod"
+import { useForm } from "react-hook-form"
+import * as z from "zod"
+import { Button } from "@/components/ui/button"
 import {
   Form,
   FormControl,
   FormField,
   FormItem,
   FormMessage,
-} from "@/components/ui/form";
-import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
+} from "@/components/ui/form"
+import { Input } from "@/components/ui/input"
+import { Textarea } from "@/components/ui/textarea"
 
 const contactSchema = z.object({
   emailAddress: z.string().email(),
-  username: z.string().min(4),
+  username: z.string().min(4, { message: "please enter your full name" }),
   componyname: z.string().min(8),
-  message: z.string().max(1000).optional(),
-});
+  message: z
+    .string()
+    .min(200, { message: "Too short , please provide more information " }),
+})
 
 export default function Contact() {
   const form = useForm<z.infer<typeof contactSchema>>({
     resolver: zodResolver(contactSchema),
-  });
+  })
 
   function onSubmit(values: z.infer<typeof contactSchema>) {
-    console.log(values);
+    console.log(values)
   }
   return (
     <section className="container  gap-x-4 mb-20 lg:mb-0  flex flex-col mt-12 gap-y-4 lg:justify-between items-start">
@@ -85,5 +87,5 @@ export default function Contact() {
         </Form>
       </div>
     </section>
-  );
+  )
 }

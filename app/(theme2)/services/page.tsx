@@ -1,15 +1,15 @@
-"use client";
-import { bulb } from "@/public";
-import { FC } from "react";
-import { RxCrop, RxDesktop, RxPencil2 } from "react-icons/rx";
-import { FaArrowLeft } from "react-icons/fa6";
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation, Pagination } from "swiper/modules";
-import "swiper/css/navigation";
-import "swiper/css/pagination";
-import "swiper/css";
-import "swiper/css/free-mode";
-import Image from "next/image";
+"use client"
+import { bulb } from "@/public"
+import { FC } from "react"
+import { RxCrop, RxDesktop, RxPencil2 } from "react-icons/rx"
+import { FaArrowLeft } from "react-icons/fa6"
+import { Swiper, SwiperSlide } from "swiper/react"
+import { Navigation, Pagination } from "swiper/modules"
+import "swiper/css/navigation"
+import "swiper/css/pagination"
+import "swiper/css"
+import "swiper/css/free-mode"
+import Image from "next/image"
 
 interface ServicesProps {}
 
@@ -17,35 +17,30 @@ const Services: FC<ServicesProps> = ({}) => {
   const serviceData = [
     {
       title: "Development",
-      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      description:
+        "Develop your Websites with high quality user interfaces and Performance ",
       icons: <RxCrop />,
     },
     {
       title: "Design",
-      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      description:
+        "Develop your brand Lorem dolor sit amet, consectetur adipiscing elit",
+      icons: <RxPencil2 />,
+    },
+
+    {
+      title: "Deploy",
+      description:
+        "Lorem ipsum dolor sit amet,  elit amet, consectetur adipiscing elit.",
       icons: <RxPencil2 />,
     },
     {
-      title: "Design",
-      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-      icons: <RxPencil2 />,
-    },
-    {
-      title: "Design",
-      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-      icons: <RxPencil2 />,
-    },
-    {
-      title: "Design",
-      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-      icons: <RxPencil2 />,
-    },
-    {
-      title: "Title",
-      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      title: "Testing",
+      description:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit , consectetur adipi .",
       icons: <RxDesktop />,
     },
-  ];
+  ]
 
   return (
     <>
@@ -112,7 +107,7 @@ const Services: FC<ServicesProps> = ({}) => {
         />
       </section>
     </>
-  );
-};
+  )
+}
 
-export default Services;
+export default Services

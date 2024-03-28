@@ -1,56 +1,66 @@
-"use client";
-import { motion as m } from "framer-motion";
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Pagination } from "swiper/modules";
-import "swiper/css/pagination";
-import "swiper/css";
-import Image from "next/image";
-import Link from "next/link";
-import { fadeIn } from "@/components/MotionVars";
+"use client"
+
+import { Swiper, SwiperSlide } from "swiper/react"
+import { Pagination } from "swiper/modules"
+import "swiper/css/pagination"
+import "swiper/css"
+import Image from "next/image"
+import Link from "next/link"
 
 const Work = ({}) => {
   const slides = [
     {
       images: [
         {
-          title: "title",
-          path: "/thumb1.jpg",
+          title: "Weather App",
+          path: "/weather.png",
+          project: "https://weather-app-eight-iota-24.vercel.app/",
         },
         {
-          title: "title",
-          path: "/thumb2.jpg",
+          title: "Personal Website",
+          path: "/omarwebsite.png",
+          project: "https://omar-dugha.vercel.app/",
+        },
+
+        {
+          title: "BookMark Manager",
+          path: "/bookmark.png",
+          project: "https://bookmark-manager.pages.dev/",
         },
         {
-          title: "title",
-          path: "/thumb3.jpg",
-        },
-        {
-          title: "title",
-          path: "/thumb4.jpg",
+          title: "Blog Manager",
+          path: "/blogmanager.png",
+          project: "https://blog-manager.pages.dev/",
         },
       ],
     },
     {
       images: [
         {
-          title: "title",
-          path: "/thumb4.jpg",
+          title: "Daraak arabic",
+          path: "/arab.png",
+          project:
+            "https://daraak-main-6h5s1rxes-omars-projects-1578f2e9.vercel.app/",
+        },
+        {
+          title: "countries api",
+          path: "/restapi.png",
+          project: "",
+        },
+        {
+          title: "Easybank",
+          path: "/eaysbank.png",
+          project: " https://easybank-landing-page-five-phi.vercel.app/",
         },
         {
           title: "title",
-          path: "/thumb1.jpg",
-        },
-        {
-          title: "title",
-          path: "/thumb2.jpg",
-        },
-        {
-          title: "title",
-          path: "/thumb3.jpg",
+          path: "/minidash.png",
+          project: "https://mini-dashboard-two.vercel.app/",
         },
       ],
     },
-  ];
+  ]
+
   return (
     <section className="container w-full lg:mt-14 items-center md:items-start lg:flex-row gap-x-2   lg:mb-0 ls:mb-12 mb-14 flex-col justify-start flex">
       <div className="max-w-md mt-12 text-left">
@@ -82,8 +92,9 @@ const Work = ({}) => {
               <div className="grid  grid-cols-2 grid-rows-2  gap-4">
                 {item.images.map((img, i) => (
                   <Link
-                    href="/"
+                    href={img.project}
                     key={i}
+                    target="_blank"
                     className="group relative rounded-md  ">
                     <div className="group-hover:blur-sm  transition-all duration-300 peer rounded-md">
                       <Image
@@ -94,7 +105,7 @@ const Work = ({}) => {
                         className="w-full   rounded-md"
                       />
                     </div>
-                    <div className="absolute h-full z-50 left-[30%] transition-all opacity-0 group-hover:translate-y-12 group-hover:opacity-100  w-fit  top-[20%] font-extrabold  ">
+                    <div className="absolute h-full z-50 left-[30%] transition-all opacity-0 group-hover:translate-y-12 group-hover:opacity-100  w-fit -top-7  md:top-[20%] font-extrabold  ">
                       <p className="transition-all duration-300  hover:text-rose-500">
                         Go to the Project !
                       </p>
@@ -107,7 +118,7 @@ const Work = ({}) => {
         </Swiper>
       </div>
     </section>
-  );
-};
+  )
+}
 
-export default Work;
+export default Work

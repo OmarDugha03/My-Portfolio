@@ -1,16 +1,16 @@
-"use client";
-import { motion as m } from "framer-motion";
-import Image from "next/image";
-import { fadeIn } from "./MotionVars";
+"use client"
+import { motion as m } from "framer-motion"
+import Image from "next/image"
+import { fadeIn } from "./MotionVars"
 
 const Home = ({}) => {
   return (
     <m.section
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
-      className="flex flex-col h-[70vh] lg:flex-row relative lg:items-center lg:mt-16 2xl:mt-44  2xl:justify-between 2xl:gap-x-40  container lg:gap-x-20">
+      className="flex flex-col h-[70vh] lg:flex-row relative  items-center lg:mt-16 2xl:mt-44  2xl:justify-between 2xl:gap-x-40  container lg:gap-x-20">
       <div
-        className="flex flex-col md:items-center lg:justify-between lg:items-start
+        className="flex flex-col items-center lg:justify-between lg:items-start
    ">
         <m.h1
           variants={fadeIn("left", 0.4)}
@@ -51,8 +51,9 @@ const Home = ({}) => {
             src="/omar.png"
             className=" items-center 2xl:w-[600px] rounded-full lg:hidden  "
             alt="person"
-            width={400}
-            height={400}
+            width={200}
+            priority
+            height={200}
           />
         </m.div>
       </div>
@@ -71,7 +72,7 @@ const Home = ({}) => {
         />
       </m.div>
     </m.section>
-  );
-};
+  )
+}
 
-export default Home;
+export default Home

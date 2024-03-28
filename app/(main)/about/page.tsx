@@ -1,17 +1,19 @@
-"use client";
+"use client"
 /* eslint-disable react/jsx-key */
-import { FC } from "react";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { FaHtml5, FaCss3, FaJs, FaReact } from "react-icons/fa";
-import { SiNextdotjs, SiFramer } from "react-icons/si";
+import { FC } from "react"
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
+import { FaHtml5, FaCss3, FaJs, FaReact } from "react-icons/fa"
+import { SiNextdotjs, SiFramer } from "react-icons/si"
 interface AboutProps {}
-import { SiTailwindcss, SiTypescript } from "react-icons/si";
+import { SiTailwindcss, SiTypescript } from "react-icons/si"
 
-import { FaGithub, FaNpm } from "react-icons/fa";
-import { frontend, sfw } from "@/public";
-import Image from "next/image";
-import { motion as m } from "framer-motion";
+import { FaGithub, FaNpm } from "react-icons/fa"
+import { frontend, sfw } from "@/public"
+import Image from "next/image"
+import { motion as m } from "framer-motion"
 const About: FC<AboutProps> = ({}) => {
+  const description =
+    "👋 Hi there! I'm Omar Dugha, a passionate Frontend Developer specializing in building responsive and user-friendly web applications. With a strong foundation in React JS, Next.js, TypeScript, and Tailwind CSS, I thrive on transforming complex ideas into elegant, functional interfaces. "
   const aboutData = [
     {
       title: "skills",
@@ -39,37 +41,17 @@ const About: FC<AboutProps> = ({}) => {
       info: [
         {
           title: "Applied Software Engineering Fundamentals ",
-          desc: `here is the Link `,
+          desc: ``,
           imgs: <Image src={sfw} alt="icon" className="w-" />,
         },
         {
           title: "Meta Frontend Developer provisional",
           imgs: <Image src={frontend} alt="ce" className="w-" />,
-          desc: "sdads",
-        },
-      ],
-    },
-    {
-      title: "experience",
-      info: [
-        {
-          title: "BookMark Manager",
-          imgs: "2012 - 2023",
-          desc: "",
-        },
-        {
-          title: "Easybank landing page",
-          imgs: "2010 - 2012",
-          desc: "",
-        },
-        {
-          title: "Intern - DEF Corporation",
-          imgs: "2008 - 2010",
           desc: "",
         },
       ],
     },
-  ];
+  ]
 
   return (
     <section className="flex flex-col items-start container mt-8">
@@ -77,10 +59,8 @@ const About: FC<AboutProps> = ({}) => {
         About Me <span className="text-rose-600">: </span>
         <p className="max-w-2xl font-medium leading-relaxed my-5 tracking-wider">
           I am a{" "}
-          <span className="font-black text-rose-600">Frontend Developer</span>,
-          excepturi dignissimos reiciendis quod beatae fuga possimus repellat
-          laudantium, veniam atque rem et, omnis cumque culpa officiis! Soluta,
-          distinctio.
+          <span className="font-black text-rose-600">Frontend Developer</span>
+          {description}
         </p>
       </h2>
       <Tabs defaultValue="skills">
@@ -119,7 +99,7 @@ const About: FC<AboutProps> = ({}) => {
         ))}
       </Tabs>
     </section>
-  );
-};
+  )
+}
 
-export default About;
+export default About
